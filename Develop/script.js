@@ -19,11 +19,11 @@ const UppersArr = charSet(65, 90); //These are the Uppercase Letters that'll be 
 const LowersArr = charSet(97, 122); //These are the Lowercase Letters that'll be used in the password string
 const NumbersArr = charSet(48, 57); //These are the Numbers that'll be used in the password string (0-9)
 const SymbolsArr = charSet(33, 47).concat(
-    arrayFromLowToHigh(58, 64)
+    charSet(58, 64)
   ).concat(
-    arrayFromLowToHigh(91, 96)
+    charSet(91, 96)
   ).concat(
-    arrayFromLowToHigh(123, 126)
+    charSet(123, 126)
 );//These are the Special symbols being used for the password string, multiple concat due to the special characters
   //being separated from each other.
 
@@ -48,7 +48,7 @@ function generatePassword() {
   if (userInputLength >= 8 && userInputLength <= 128) {
     let passwordString = "";
 
-    let poolArray = charPool();
+    let poolArray = CharPool();
     console.log(poolArray);
 
     console.log(randomIndexGenerator(poolArray.length));
@@ -61,7 +61,7 @@ function generatePassword() {
     console.log(passwordString);
       return passwordString
       ;} else {
-    return "Please type a number between 8 and 128 characters for your password."
+    return "You chose a number that was not between 8 and 128 characters. Please try again."
       ;
   }
 }
@@ -74,22 +74,27 @@ function CharPool() {
       ;
   }
 
-  if (confirm("Would you like to incorporate LowerCase Letters as well?")) {
+  if (confirm("Would you like to add LowerCase Letters as well?")) {
     CharArray = CharArray.concat(LowersArr)
       ;
   }
 
-  if (confirm("Would you like to incorporate Numbers to your password?")) {
+  if (confirm("Would you like to add Numbers to your password?")) {
     CharArray = CharArray.concat(NumbersArr)
       ;
   }
 
-  if (confirm("Would you like to incorporate Special Characters to your password?")) {
+  if (confirm("Would you like to add Special Characters to your password?")) {
     CharArray = CharArray.concat(SymbolsArr)
       ;
   }
 
-  console.log(CharArray);
+  if (CharArray.length === 0) {
+    alert("Please choose at least one of the following options.")
+    return CharPool();
+  }
+
+  console.log(CharArray)
   return CharArray;
 }
 
