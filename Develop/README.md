@@ -1,100 +1,31 @@
-# 03 JavaScript: Password Generator
+# Lets-Play-a-Guessing-Game
+To the surprise of the user, this repository is for generating a random password.
 
-## Your Task
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+Within this very difficult homework, I was able to apply the Javascript I learned the past few days.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+In this project, I did not mess with any of the HTML or CSS, this was purely JS.
+THIS TIME I MADE SURE TO INSERT COMMENTS, because I forgot to add them last time.
 
-## User Story
+The first lines of code I put in were for the charSet on lines 18 to 26.
+    In these lines of code, they are separated by the charCode (Special characters, upper and lowercase, and numbers.)
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+    Once this was set up I made the prompt that would display to the user:
+            How many characters they'd like
+            Whether they'd like to add:
+                    Uppercase letters
+                    Lowercase Letters
+                    Special characters
+                    Numbers
+    In the event that the user chose to say no to all four options, I added a line of code to prompt the user that they need to choose at least one of the four.
 
-## Acceptance Criteria
+    Along with that, if the user chose a number below 8 and above 128 characters, they are prompt letting them know that they need to choose a number within the range provided.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+    As the user chooses out of the four options, it will start pulling random strings to generate a randomized password.
 
-## Mock-Up
+    Deployed URL: file:///C:/Users/hocol/OneDrive/Desktop/CODING/Homework/Lets-Play-a-Guessing-Game/Develop/index.html
 
-The following image shows the web application's appearance and functionality:
+    Repository URL: https://kims1998.github.io/Lets-Play-a-Guessing-Game/
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
-
-## Grading Requirements
-
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+    This photo shows the password generator in works, the user had chosen a certain amount of characters and said yes to every option.
+    file:///C:/Users/hocol/OneDrive/Desktop/CODING/Homework/Lets-Play-a-Guessing-Game/IMG/Password%20generator%20pic.JPG
